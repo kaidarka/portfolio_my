@@ -1,22 +1,33 @@
 .header
-    background-color: #C9D9DA
-    height: 100vh
+    height: 110px
+    z-index: 9
+    position: relative
     &__burger
 
     &__nav
-
+        
     &__socials
         display: flex
         flex-direction: column
+        align-items: center
         position: absolute
         right: 0
-        top: 83px
+        top: 193px
         margin-top: -28px
 
     &__avatar
         position: absolute
         left: 10%
-        top: 10%
+        top: 27%
+        border-radius: 355px
+        box-shadow: 0 0 30px rgba(0,0,0,0.5)
+        transition: all .3s
+        &:hover
+            transform: scale(1.01)
+            transform: translateY(-5px) 
+            box-shadow: 0 5px 30px rgba(0,0,0,0.8)
+            
+        
     &__text
         position: absolute
         bottom: 10%
@@ -28,11 +39,18 @@
     &__subtitle
         font-weight: 500
         font-size: 36px
+    
         line-height: 42px
+        & span
+            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)
+            background-repeat: no-repeat
+            background-size: 100% 0.2em
+            background-position: 0 88%
 
 .hero
     position: relative
-    height: 83%
+    height: 100%
+    z-index: 8
 .container
 
 .header-container
@@ -62,11 +80,26 @@
         font-size: 32px
         line-height: 38px
         font-weight: 400
+        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)
+        background-repeat: no-repeat
+        background-size: 100% 0.2em
+        background-position: 0 88%
+        transition: background-size 0.25s ease-in
+        &:hover
+            background-size: 100% 88%
+            color: #000
+            
 
 .socials
     &__item
-        margin-bottom: 26px
-        &:last-child
-            margin-bottom: 0
+        padding: 13px 0px
+        transition: all .3s
+        & img
+            transition: all .3s
+        &:hover
+            & img
+                transform: scale(1.1)
+                transform: translateX(-20px)
+        
 
 
