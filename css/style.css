@@ -286,23 +286,37 @@ main {
 }
 
 .works {
-  padding-top: 190px;
+  padding-top: 150px;
 }
 
 .cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  padding: 0 15px;
+}
+
+.card-1 {
+  background: url("../img/logo-skm.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.card-2 {
+  background: #c5c5c5 url("../img/willberries.svg") center center no-repeat;
+  background-size: 55%;
+}
+
+.card-3 {
+  background: #c5c5c5 url("../img/it.png") center center no-repeat;
+  background-size: 30%;
 }
 
 .card {
   height: 400px;
   width: 300px;
-  background: url("../img/logo-skm.jpg") center center no-repeat;
-  background-size: cover;
   border-radius: 15px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -382,26 +396,93 @@ main {
           transition-delay: .8s;
 }
 
-.card:hover {
+.card:hover, .card :active {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-.card:hover .card-content {
+.card:hover .card-content, .card :active .card-content {
   bottom: 0;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
 
-.card:hover .card-text {
+.card:hover .card-text, .card :active .card-text {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.card:hover .card-button {
+.card:hover .card-button, .card :active .card-button {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+.modal-slider__prev {
+  width: 50px;
+  position: absolute;
+  left: -15px;
+  top: 190px;
+}
+
+.modal-slider__next {
+  width: 50px;
+  position: absolute;
+  right: -15px;
+  top: 190px;
+}
+
+@media screen and (max-width: 1075px) {
+  .card {
+    width: 250px;
+    height: 333px;
+  }
+  .modal-slider__prev {
+    top: 160px;
+  }
+  .modal-slider__next {
+    top: 160px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .card {
+    width: 200px;
+    height: 266px;
+  }
+  .card-text {
+    font-size: 18px;
+    top: 30px;
+  }
+  .card-buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: block;
+    text-align: center;
+  }
+  .card-button:first-child {
+    display: none;
+  }
+  .cards {
+    padding: 0 25px;
+  }
+  .modal-slider__prev {
+    top: 140px;
+    width: 30px;
+  }
+  .modal-slider__next {
+    width: 30px;
+    top: 140px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 /*# sourceMappingURL=style.css.map */
