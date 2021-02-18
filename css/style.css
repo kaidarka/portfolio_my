@@ -396,24 +396,47 @@ main {
           transition-delay: .8s;
 }
 
-.card:hover, .card :active {
+.card:hover, .card :focus {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-.card:hover .card-content, .card :active .card-content {
+.card:hover .card-content, .card :focus .card-content {
   bottom: 0;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
 
-.card:hover .card-text, .card :active .card-text {
+.card:hover .card-text, .card :focus .card-text {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.card:hover .card-button, .card :active .card-button {
+.card:hover .card-button, .card :focus .card-button {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.card:focus {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.card:focus .card-content {
+  bottom: 0;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.card:focus .card-text {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.card:focus .card-button {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
