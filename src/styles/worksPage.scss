@@ -1,0 +1,38 @@
+.card{
+  border-radius: 20px;
+  background-color: rgba(255,255,255,.2);
+  backdrop-filter: blur(4px);
+  padding: 20px 20px;
+  position: relative;
+  min-height: 250px;
+  &__logo{
+    & svg{
+      width: 100%;
+    }
+  }
+  &__link{
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 7px 12px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: .3s;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    &:hover {
+      color: #000;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      transform: scale(1.05);
+    }
+
+  }
+  & h3{
+     font-size: 20px;
+  }
+}
+.cards{
+  overflow-y: auto;
+}

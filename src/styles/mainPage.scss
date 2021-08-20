@@ -1,0 +1,41 @@
+.social{
+  &-item{
+    margin-bottom: 15px;
+    text-align: end;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    & a svg{
+      padding: 13px 0px;
+      transition: all .3s;
+    }
+    &:hover{
+      & a svg{
+        transform: scale(1.1);
+        transform: translateX(-20px);
+      }
+    }
+  }
+  &-link{
+    & svg{
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+.content{
+  height: calc(100vh - 110px);
+  align-items: center;
+  display: flex;
+}
+.avatar{
+  margin-bottom: 30px;
+  border-radius: 355px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  transition: all .3s;
+  &:hover {
+    transform: scale(1.01);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.8);
+  }
+}
