@@ -13,7 +13,7 @@ export const DataSite = {
         {
             name: 'telegram',
             img:'#telegram',
-            link: 'https://t.me/kaidarkaa'
+            link: 'https://t.me/kaidarka'
         }
     ],
     works: [
